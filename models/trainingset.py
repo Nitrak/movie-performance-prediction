@@ -39,7 +39,8 @@ def readfile(filename, encoding, delimiter):
             rows.append(row)
     return rows
 
-# Returns a function that jitters all inputs in a pair of numpy arrays.
+# Returns a function that jitters all inputs in a pair of numpy arrays. 
+# Various different methods have been trided in this function.
 # ranges: a list of tuples (min, max, n), which says that for inputs whose
 # output lies in the (min, max) percentile range, n extra inputs should be genereated.
 # jitter_percentage, the range that each input can be multiplied with
