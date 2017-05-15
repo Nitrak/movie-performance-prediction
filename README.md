@@ -3,6 +3,7 @@ Part of the code of the bachelor project of Per Josefsen and Michael Vesterli fo
 
 Most of our code was written for one time use only, however the following scripts may still be useful. All are written using python3
 
+## Data gathering scripts
 `trends/update_aggregation.py`
 To get Google Trends values we have two datasets that collect the data points returned by google trends. trend\_single\_aggregation collects a list of values without comparing them, and trend\_cmp\_aggregation collects a list with comparisons. The list is stored in order to find the mean. This script updates every item in the provided dataset until a max value by querying google trend and scraping its graph. However it requires that an existing dataset is present.
 
@@ -26,3 +27,19 @@ This script uses the budgets and premiere dates of movies to find the main compe
 
 `fill_crewdata`
 This script calculates the previous success of actors and directors for each movie and inserts it into the dataset.
+
+## Models
+`day0.py`
+This script creates the specialized model, using data from the day given in the `TARGET_DAY` variable.
+
+`day_diff`
+This script creates the general model, which is trained on data from days between `STARTDAY` and `ENDDAY`.
+
+`sharda_paper_model`
+This script creates the model used by Sharda and Delen (2006).
+
+`trainingset.py` 
+This module allows describing a dataset using different kinds of attributes across multiple files. It also contains functions for manipulating the dataset.
+
+`prediction.py` 
+This module contains various means of evaluating the result of the models.
